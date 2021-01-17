@@ -1,0 +1,237 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+//project
+
+int main() {
+
+printf("\t\t****** Welcome ******\n\n");
+
+printf("\t\t**** ESTATE COMPANY ****\n");
+
+printf("\t\t***** ISTANBUL *****\n");
+
+printf("\tPlease,sign up for use our app\n");
+
+    char namesurname[20];
+    int password;
+    int phonenumber;
+
+FILE *text;
+text=fopen("berkayurasprojesi.txt","w");
+printf("Your Name and Surname: ");
+gets(namesurname);
+printf("Your Password: ");
+scanf("%d",&password);
+printf("Your Phone Number:05");
+scanf("%d",&phonenumber);
+fprintf(text,"Your Name and Surname:%s\n",namesurname);
+fprintf(text,"Your Password:%d\nYour Phone Number:05%d",password,phonenumber);
+fclose(text);
+printf("\n");
+printf("\t**********************************\n\n");
+
+    int salerent=0;
+
+while(salerent>2 || salerent==0)
+
+{
+printf("Please,choose one of them(1 or 2): 1)for sale 2)for rent \n");
+scanf("%d",&salerent);
+
+if(salerent>2 || salerent==0)
+
+{
+
+printf("INCORRECT ENTRY,Please try again.");
+
+     }
+}
+
+int cost=0;
+
+     while(cost>2 || cost==0)
+
+{
+     printf("please,choose house price one of them(1 or 2): 1)400.000-700.000 TL  2)700.000-900.000 TL\n");
+     scanf("%d",&cost);
+
+     if(cost>2 || cost==0)
+{
+      printf("INCORRECT ENTRY,Please try again.");
+}
+    }
+     int rooms=0;
+
+       while(rooms>2 || rooms==0){
+
+    printf("Please,enter the number of room(1 or 2 or 3): 1) '3+1' 2) '2+1' 3) '1+1'\n");
+    scanf("%d",&rooms);
+     if(rooms>3 || rooms==0){
+
+    printf("INCORRECT ENTRY,Please try again.");
+      }
+       }
+    int hs=0;
+
+    while(hs>2 || hs==0)
+
+{
+
+printf("Please,enter the house size(in square meter)(1 or 2): 1)'80-150' 2)'151-200'\n");
+
+    scanf("%d",&hs);
+
+if(hs>2 || hs==0){
+
+printf("INCORRECT ENTRY,Please try again.");
+
+}
+}
+
+int location=0;
+
+    while(location>2 || location==0){
+
+      printf("Please,choose one of them(1 or 2). 1)Europe 2)Asia\n");
+
+          scanf("%d",&location);
+
+if(location>2 || location==0){
+
+printf("INCORRECT ENTRY,Please try again.");
+}
+}
+   printf("\n");
+   printf("\t\t\t\t\t\tYOUR CHOICES\n\n");
+
+   
+   printf("*for sale-for rent*");
+   printf("\t\t*price*");
+   printf("\t\t\t*room*");
+   printf("\t\t*housesize(m^2)*");
+   printf("\t*location*(Istanbul)\n*");
+   printf("******************");
+   printf("\t\t*******");
+   printf("\t\t\t******");
+   printf("\t\t****************");
+   printf("\t********************\n");
+
+   if(salerent==1){
+
+    printf(" for sale");
+    }
+    else
+    {
+    printf(" for rent");
+    }
+    if(cost==1)
+    {
+printf("\t\t  400.000-700.000TL");
+}
+else
+{
+printf("\t\t  700.000-900.000TL");
+}
+if(rooms==1)
+{
+printf("\t\t 3+1");
+}
+else if(rooms==2)
+{
+printf("\t\t 2+1");
+}
+else
+    {
+printf("\t\t 1+1");
+}
+if(hs==1)
+{
+printf("\t\t 80-150");
+}
+else
+{
+printf("\t\t 151-200");
+}
+if(location==1)
+{
+printf("\t\t\t   Europe");
+}
+else
+{
+printf("\t\t\t    Asia");
+}
+
+
+  printf("\n\n");
+  printf("*************************************************************\n\n");
+
+     char press;
+
+     while(press!='E')
+
+{
+printf("Press'E'for display your account information:");
+scanf("%s",&press);
+
+if(press!='E'){
+
+    printf("INCORRECT ENTRY,Please try again.") ;
+
+}
+}
+
+    printf("Name and Surname:%s\n",namesurname);
+    printf("Password:%d\n",password);
+    printf("Phone Number:05%d\n",phonenumber);
+
+
+    printf("\n*************************************************************\n");
+    printf("\n\n");
+    
+    int confirm;
+
+    printf("\t\t\t\tDO YOU CONFIRM YOUR ACCOUNT INFORMATION?\n\n\n");
+    
+    while(confirm>2 || confirm==0){
+
+printf("Press 1 for confirm your account information or Press 2 for change your account information:");
+scanf("%d",&confirm);
+
+    if(confirm>2 || confirm==0){
+
+    printf("INCORRECT ENTRY,Please try again.");
+}
+
+else if(confirm==1)
+{
+printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
+break;
+}
+
+else if(confirm==2)
+
+{
+FILE *text;
+
+text=fopen("berkayurasprojesi.txt","w");
+printf("Your Name and Surname:");
+scanf("%s",&namesurname);
+printf("Your Password:");
+scanf("%d",&password);
+printf("Your Phone Number:05");
+scanf("%d",&phonenumber);
+fprintf(text,"Your Name and Surname:%s\n",namesurname);
+fprintf(text,"Your Password:%d\nYour Phone Number:05%d",password,phonenumber);
+fclose(text);
+printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
+
+break;
+
+}
+}
+
+return 0;
+
+}
