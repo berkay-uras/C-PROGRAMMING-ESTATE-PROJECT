@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-
-//project
+#include <iostream> 
+#include <time.h>
 
 int main() {
-
+ 
 printf("\t\t****** Welcome ******\n\n");
 
 printf("\t\t**** ESTATE COMPANY ****\n");
@@ -64,7 +63,7 @@ int cost=0;
     }
      int rooms=0;
 
-       while(rooms>2 || rooms==0){
+       while(rooms>3 || rooms==0){
 
     printf("Please,enter the number of room(1 or 2 or 3): 1) '3+1' 2) '2+1' 3) '1+1'\n");
     scanf("%d",&rooms);
@@ -169,13 +168,13 @@ printf("\t\t\t    Asia");
 
      char press;
 
-     while(press!='E')
+     while(press!='E' && press!='e')
 
 {
-printf("Press'E'for display your account information:");
+printf("Press'E','e'for display your account information:");
 scanf("%s",&press);
 
-if(press!='E'){
+if(press!='E' && press!='e'){
 
     printf("INCORRECT ENTRY,Please try again.") ;
 
@@ -206,13 +205,18 @@ scanf("%d",&confirm);
 
 else if(confirm==1)
 {
-printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
+	int a;
+	srand(time(NULL));
+	a=rand()%20;
+	printf("\n\nWe have %d houses on our app for you.",a);
+printf("\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
 break;
 }
 
 else if(confirm==2)
 
 {
+	
 FILE *text;
 
 text=fopen("berkayurasprojesi.txt","w");
@@ -225,7 +229,11 @@ scanf("%d",&phonenumber);
 fprintf(text,"Your Name and Surname:%s\n",namesurname);
 fprintf(text,"Your Password:%d\nYour Phone Number:05%d",password,phonenumber);
 fclose(text);
-printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
+int b;
+srand(time(NULL));
+	b=rand()%20;
+	printf("\n\nWe have %d houses on our app for you.",b);
+printf("\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
 
 break;
 
