@@ -7,11 +7,11 @@ int main() {
  
 printf("\t\t****** Welcome ******\n\n");
 
-printf("\t\t**** ESTATE COMPANY ****\n");
+printf("\t\t*** ESTATE COMPANY ***\n\n");
 
-printf("\t\t***** ISTANBUL *****\n");
+printf("\t\t***** ISTANBUL *****\n\n");
 
-printf("\tPlease,sign up for use our app\n");
+printf("\t  Please,sign up for use our app\n");
 
     char namesurname[20];
     int password;
@@ -21,7 +21,7 @@ FILE *text;
 text=fopen("berkayurasprojesi.txt","w");
 printf("Your Name and Surname: ");
 gets(namesurname);
-printf("Your Password: ");
+printf("Determine a Password: ");
 scanf("%d",&password);
 printf("Your Phone Number:05");
 scanf("%d",&phonenumber);
@@ -29,8 +29,8 @@ fprintf(text,"Your Name and Surname:%s\n",namesurname);
 fprintf(text,"Your Password:%d\nYour Phone Number:05%d",password,phonenumber);
 fclose(text);
 printf("\n");
-printf("\t**********************************\n\n");
-
+printf("***********************************************\n");
+printf("\t\tLets Start\n\n");
     int salerent=0;
 
 while(salerent>2 || salerent==0)
@@ -181,7 +181,7 @@ if(press!='E' && press!='e'){
 }
 }
 
-    printf("Name and Surname:%s\n",namesurname);
+    printf("\nName and Surname:%s\n",namesurname);
     printf("Password:%d\n",password);
     printf("Phone Number:05%d\n",phonenumber);
 
@@ -222,7 +222,7 @@ FILE *text;
 text=fopen("berkayurasprojesi.txt","w");
 printf("Your Name and Surname:");
 scanf("%s",&namesurname);
-printf("Your Password:");
+printf("Determine a Password:");
 scanf("%d",&password);
 printf("Your Phone Number:05");
 scanf("%d",&phonenumber);
@@ -232,8 +232,8 @@ fclose(text);
 int b;
 srand(time(NULL));
 	b=rand()%20;
-	printf("\n\nWe have %d houses on our app for you.",b);
-printf("\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
+	printf("\nWe have %d houses on our app for you.",b);
+    printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
 
 break;
 
