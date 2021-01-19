@@ -5,20 +5,20 @@
 
 int main() {
  
-printf("\t\t****** Welcome ******\n\n");
+printf("\t\t\t\t\t****** Welcome ******\n\n");
 
-printf("\t\t*** ESTATE COMPANY ***\n\n");
+printf("\t\t\t\t\t*** ESTATE COMPANY ***\n\n");
 
-printf("\t\t***** ISTANBUL *****\n\n");
+printf("\t\t\t\t\t***** ISTANBUL *****\n\n");
 
-printf("\t  Please,sign up for use our app\n");
+printf("\t\t\t\t  Please,sign up for use our app\n");
 
     char namesurname[20];
     int password;
     int phonenumber;
 
 FILE *text;
-text=fopen("berkayurasprojesi.txt","w");
+text=fopen("berkayurasfuatmertdagproject.txt","w");
 printf("Your Name and Surname: ");
 gets(namesurname);
 printf("Determine a Password: ");
@@ -200,7 +200,7 @@ scanf("%d",&confirm);
 
     if(confirm>2 || confirm==0){
 
-    printf("INCORRECT ENTRY,Please try again.");
+    printf("INCORRECT ENTRY,Please try again.");	
 }
 
 else if(confirm==1)
@@ -219,7 +219,7 @@ else if(confirm==2)
 	
 FILE *text;
 
-text=fopen("berkayurasprojesi.txt","w");
+text=fopen("berkayurasfuatmertdagproject.txt","w");
 printf("Your Name and Surname:");
 scanf("%s",&namesurname);
 printf("Determine a Password:");
@@ -232,7 +232,7 @@ fclose(text);
 int b;
 srand(time(NULL));
 	b=rand()%20;
-	printf("\nWe have %d houses on our app for you.",b);
+	printf("\n\nWe have %d houses on our app for you.",b);
     printf("\n\nOur customer service will call you as soon as possible.THANK YOU FOR CHOOSE US.");
 
 break;
